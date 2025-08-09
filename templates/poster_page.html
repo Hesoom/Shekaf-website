@@ -1,0 +1,18 @@
+{% include "header.html" %}
+
+
+<div class="poster-container">
+    <img class="poster-image" src="{{ poster[2] }}" alt="">
+    <div class="poster-details">
+        <p class="inter-bold poster-title">{{ poster[0] }}</p>
+        <div>
+            <p class="inter-light poster-price">{{ "{:,}".format(poster[1]) }} toman</p>
+            <p class="inter-bold poster-size">Size : 26.5 x 18.5cm</p>
+        </div>
+        <p class="inter-light poster-desc">Printed on premium photo glossy paper with a protective laminate finish, offering exceptional resistance to light, water, alcohol, and scratches for long-lasting beauty.</p>
+        <a class="inter-regular add-poster" href="">Add to cart</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% include "header.html" %}
+
+    <div class="register-container inter-regular">
+        <input class="textbox inter-regular" type="text" placeholder="Username">
+        <input class="textbox inter-regular" type="text" placeholder="Email">
+        <input class="textbox inter-regular" type="password" placeholder="Password">
+        
+        <div class="btns">
+            <a class="main-register-btn" href="#">SIGN UP</a>
+            <a class="other-reg-btn" href="{{ url_for('login') }}">Already have an account?</a>
+        </div>
+    </div>
+
+</body>
+</html>

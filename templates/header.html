@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,12 +15,15 @@
 <body>
     <header class="header">
         <div class="github-section">
-            <img src="static/img/profile.jpg" alt="Profile" class="profile-pic">
+            <img src="/static/img/profile.jpg" alt="Profile" class="profile-pic">
             <a class="github-btn inter-regular" href="https://github.com/hesoom" target="_blank">GitHub</a>
         </div>
+        <div>
+            <a href="{{ url_for('home') }}"><img src="/static/img/logo.png" alt="Logo" class="logo-pic"></a>
+        </div>
         <div class="header-btn-section">
-            <a class="signup-btn inter-regular" href="#">SIGN UP</a>
-            <a class="login-btn inter-regular" href="#">LOGIN</a>
+            <a class="register-btn inter-regular" href="{{ url_for('signup') }}">SIGN UP</a>
+            <a class="register-btn inter-regular" href="{{ url_for('login') }}">LOGIN</a>
         </div>
     </header>
 

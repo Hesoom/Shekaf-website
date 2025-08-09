@@ -3,7 +3,7 @@
     <div class="image-container">
         {% for poster in posters %}
             <div class="poster">
-                <img class="cover" src="{{ poster[2] }}" alt="">
+                <a href="{{ url_for('poster_page',poster_name=poster[0]) }}"><img class="cover" src="{{ poster[2] }}" alt=""></a>
                 <div class="details">
                     <div>
                     <h2 class="name inter-light">{{ poster[0] }}</h2>

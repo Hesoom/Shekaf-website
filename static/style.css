@@ -2,6 +2,7 @@ body {
     background-color: #111111;
     color: white;
 
+
 }
 
 /* FONTS */
@@ -61,19 +62,25 @@ body {
     color: #9e9e9e;
 }
 
-.signup-btn {
+.register-btn {
     color: white;
-    background-color: #305032;
     padding: 5px 10px;
     border-radius: 10px;
     text-decoration: none;
 }
-.login-btn {
-    color: white;
-    text-decoration: none;
+.register-btn:hover {
+  background-color: #305032;
 }
 
-/* POSTERS */
+.logo-pic {
+  width: 100%;
+  max-width: 165px;
+  height: auto;
+  aspect-ratio: 165 / 84;
+  object-fit: cover;
+}
+
+/* HOME BODY */
 
 .image-container {
   display: flex;
@@ -115,4 +122,139 @@ body {
   border-radius: 10px;
   color: white;
   text-decoration: none;
+}
+.add:hover {
+  background-color: #416d44;
+}
+
+/* LOGIN PAGE */
+.register-container {
+  background-color: #1A1A1A;
+  border-radius: 20px;
+ 
+  width: 90%;
+  max-width: 423px;
+  height: auto;
+  margin: 10rem auto;
+  padding: 50px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.textbox {
+  background-color: #3D3D3D;
+  border-radius: 15px;
+  border: 0;
+  width: 310px;
+  height: 42px;
+}
+
+.textbox[type="text"],
+.textbox[type="password"] {
+  color: white;
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+
+.main-register-btn {
+  background-color: #305032;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+}
+.other-reg-btn {
+  color: #B9FFBE;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;  
+}
+
+/* POSTER PAGE */
+
+p {
+  margin: 0;
+}
+
+.poster-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 5rem auto;
+}
+
+.poster-image {
+  width: 100%;
+  max-width: 569px;
+  height: auto;
+  aspect-ratio: 569 / 569;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.poster-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 2rem;
+  margin: 0 5rem;
+  max-width: 30rem;
+}
+
+.poster-title {
+  font-size: 32px;
+}
+
+.poster-price {
+  font-size: 24px;
+}
+
+.poster-size,
+.poster-desc {
+  font-size: 16px;
+}
+
+.add-poster {
+  background-color: #305032;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  max-width: 120px;
+  text-align: center;
+}
+
+.add-poster:hover {
+  background-color: #426e45;
+}
+
+.homebutton {
+  background-color: #305032;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  max-width: 120px;
+  text-align: center;
+  margin: 2rem;
+}
+
+.homebutton:hover {
+  background-color: #426e45;
 }
