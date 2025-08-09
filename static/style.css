@@ -1,0 +1,72 @@
+body {
+    background-color: #111111;
+}
+
+/* FONTS */
+.inter-light {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+.inter-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.inter-bold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+.github-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.header-btn-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 25px;
+}
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.github-btn {
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.github-btn:hover {
+    color: #9e9e9e;
+}
+
+.signup-btn {
+    color: white;
+    background-color: #305032;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.login-btn {
+    color: white;
+    text-decoration: none;
+}
