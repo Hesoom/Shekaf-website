@@ -1,6 +1,19 @@
 {% include "header.html" %}
 
+    <div class="image-container">
+        {% for poster in posters %}
+            <div class="poster">
+                <img class="cover" src="{{ poster[2] }}" alt="">
+                <div class="details">
+                    <div>
+                    <h2 class="name inter-light">{{ poster[0] }}</h2>
+                    <h2 class="price inter-light">{{ "{:,}".format(poster[1]) }}t</h2></div>
+                    <div><a class="add inter-regular" href="#">Add</a></div>
+                </div>
+                
+            </div>
+        {% endfor %}
+    </div>
 
-    
 </body>
 </html>

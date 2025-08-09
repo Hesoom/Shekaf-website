@@ -1,5 +1,7 @@
 body {
     background-color: #111111;
+    color: white;
+
 }
 
 /* FONTS */
@@ -69,4 +71,48 @@ body {
 .login-btn {
     color: white;
     text-decoration: none;
+}
+
+/* POSTERS */
+
+.image-container {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3.5rem;
+  margin: 10rem auto;
+}
+
+.cover {
+  width: 100%;
+  max-width: 330px;
+  height: auto;
+  aspect-ratio: 330 / 400;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.details {
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.name,
+.price {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.add {
+  background-color: #305032;
+  font-size: 20px;
+  padding: 5px 10px;
+  margin-right: 20px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
 }

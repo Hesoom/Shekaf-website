@@ -1,0 +1,25 @@
+# import sqlite3
+
+# conn = sqlite3.connect("item.db")
+# c = conn.cursor()
+
+# c.execute("INSERT INTO items VALUES('Taxi Driver',50000,'/static/img/items/7.jpg')")
+# conn.commit()
+# c.execute("INSERT INTO items VALUES('No Sleep',50000,'/static/img/items/1.jpg')")
+# conn.commit()
+# c.execute("INSERT INTO items VALUES('Adulthood',50000,'/static/img/items/2.jpg')")
+# conn.commit()
+# c.execute("INSERT INTO items VALUES('Be Yourself',50000,'/static/img/items/3.jpg')")
+# conn.commit()
+# c.execute("INSERT INTO items VALUES('The Hangover',50000,'/static/img/items/4.jpg')")
+# conn.commit()
+# c.execute("INSERT INTO items VALUES('Pare Parvaz',50000,'/static/img/items/5.jpg')")
+# conn.commit()
+# c.execute("INSERT INTO items VALUES('Procrastination',50000,'/static/img/items/6.jpg')")
+# conn.commit()
+# c.execute("INSERT INTO items VALUES('Shining',50000,'/static/img/items/8.jpg')")
+# conn.commit()
+# c.execute("INSERT INTO items VALUES('Clockwork Orange',50000,'/static/img/items/9.jpg')")
+# conn.commit()
+
+# conn.close()
