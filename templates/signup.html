@@ -1,15 +1,56 @@
 {% include "header.html" %}
 
-    <div class="register-container inter-regular">
-        <input class="textbox inter-regular" type="text" placeholder="Username">
-        <input class="textbox inter-regular" type="text" placeholder="Email">
-        <input class="textbox inter-regular" type="password" placeholder="Password">
-        
-        <div class="btns">
-            <a class="main-register-btn" href="#">SIGN UP</a>
-            <a class="other-reg-btn" href="{{ url_for('login') }}">Already have an account?</a>
-        </div>
-    </div>
+        <form method="POST" action="">
+            <div class="register-container inter-regular">
+                {{ form.hidden_tag() }}
+                
+                {% if form.username.errors %}
+                    <div>
+                        {{ form.username(class="textbox inter-regular is-invalid", placeholder="Username") }}
+                        <div class="invalid-feedback inter-regular">
+                            {% for error in form.username.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% else %}
+                    {{ form.username(class="textbox inter-regular", placeholder="Username") }}
+                {% endif %}
+
+                
+                {% if form.email.errors %}
+                    <div>
+                        {{ form.email(class="textbox inter-regular is-invalid", placeholder="Email") }}
+                        <div class="invalid-feedback inter-regular">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% else %}
+                    {{ form.email(class="textbox inter-regular", placeholder="Email") }}
+                {% endif %}
+
+                {% if form.password.errors %}
+                    <div>
+                        {{ form.password(class="textbox inter-regular is-invalid", placeholder="Password") }}
+                        <div class="invalid-feedback inter-regular">
+                            {% for error in form.password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% else %}
+                    {{ form.password(class="textbox inter-regular", placeholder="Password") }}
+                {% endif %}
+
+                <div class="btns">
+                    {{ form.submit(class="main-register-btn") }}
+                    <a class="other-reg-btn" href="{{ url_for('login') }}">Already have an account?</a>
+                </div>
+            </div>
+        </form>
+    
 
 </body>
 </html>

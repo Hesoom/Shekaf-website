@@ -1,5 +1,17 @@
 {% include "header.html" %}
 
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div id="flash-overlay" onclick="this.style.display='none'">
+                <div class="flash-message success inter-regular">
+                    {% for category, message in messages %}
+                      <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    {% endwith %}
+
     <div class="image-container">
         {% for poster in posters %}
             <div class="poster">

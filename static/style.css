@@ -1,8 +1,7 @@
+
 body {
     background-color: #111111;
     color: white;
-
-
 }
 
 /* FONTS */
@@ -160,13 +159,27 @@ body {
   padding-left: 1rem;
 }
 
+.is-invalid {
+  background-color: #413030;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+
 .main-register-btn {
   background-color: #305032;
   font-size: 20px;
   padding: 5px 10px;
   border-radius: 10px;
+  border: 0;
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 .other-reg-btn {
   color: #B9FFBE;
@@ -257,4 +270,40 @@ p {
 
 .homebutton:hover {
   background-color: #426e45;
+}
+
+#flash-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: pointer; /* hints user can click */
+}
+
+.flash-message.success {
+  background: rgba(119, 212, 116, 0.842);
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  max-width: 90%;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #000000;
+  cursor: default; /* prevent pointer on message box */
+}
+
+.flash-message.unsuccess {
+  background: rgba(255, 0, 0, 0.493);
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  max-width: 90%;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ffffff;
+  cursor: default;
 }
