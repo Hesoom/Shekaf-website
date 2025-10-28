@@ -22,8 +22,15 @@
             <a href="{{ url_for('home') }}"><img src="/static/img/logo.png" alt="Logo" class="logo-pic"></a>
         </div>
         <div class="header-btn-section">
-            <a class="register-btn inter-regular" href="{{ url_for('signup') }}">SIGN UP</a>
-            <a class="register-btn inter-regular" href="{{ url_for('login') }}">LOGIN</a>
+            {% if current_user.is_authenticated %}
+                <p class="inter-regular">Hi, {{ current_user.username.upper() }}!</p>
+                <a class="register-btn inter-regular" href="{{ url_for('logout') }}">LOG OUT</a>
+            {% else %}
+                <a class="register-btn inter-regular" href="{{ url_for('signup') }}">SIGN UP</a>
+                <a class="register-btn inter-regular" href="{{ url_for('login') }}">LOGIN</a>
+            {% endif %}
+
+            
         </div>
     </header>
 
