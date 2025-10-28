@@ -4,22 +4,18 @@ from flask_sqlalchemy import SQLAlchemy
 from forms import RegistrationForm, LoginForm
 from flask_login import UserMixin, login_user, login_required, current_user, logout_user
 from werkzeug.security import generate_password_hash, check_password_hash
-import os
-
-
-basedir = os.path.abspath(os.path.dirname(__file__))
-db_path = os.path.join(basedir, "item.db")
-conn = sqlite3.connect(db_path)
-c = conn.cursor()
-
-c.execute("SELECT * FROM items")
-posters = c.fetchall()
 
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = '192SD87HAKD89CQHDJQXCDAQ'
-app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///items.db'
+app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///store.db'
 db = SQLAlchemy(app)
+
+class Items(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100))
+    price = db.Column(db.Float)
+    image_url = db.Column(db.String(255))
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -32,6 +28,7 @@ with app.app_context():
 
 @app.route("/")
 def home():
+    posters = Items.query.all()
     return render_template("index.html", posters=posters)
 
 @app.route("/login", methods=["GET","POST"])
@@ -78,17 +75,14 @@ def signup():
 
 @app.route("/poster/<poster_name>")
 def poster_page(poster_name):
-    with sqlite3.connect("item.db") as con:
-        c = con.cursor()
-        c.execute("SELECT * FROM items WHERE name = ?", (poster_name,))
-        current_poster = c.fetchall()[0]
     
+    current_poster = Items.query.filter_by(name=poster_name).first()
     return render_template("poster_page.html", poster=current_poster)
 
 @app.route("/payment")
 def payment():
     return render_template("payment.html")
 
-conn.close()
+
 if __name__ == "__main__":
     app.run(debug=True)
